@@ -55,3 +55,5 @@ if __name__ == "__main__":
         show_pie_chart(recommendations)
     else:
         print("No recommendations found.")
+
+print("Program finished.")
