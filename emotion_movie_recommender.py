@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 try:
     df = pd.read_excel("movies_with_emotions_year.xlsx")
 except FileNotFoundError:
-    print("❌ File not found. Please ensure 'movies_with_emotions_year.xlsx' is in the same folder.")
+    print(" File not found. Please ensure 'movies_with_emotions_year.xlsx' is in the same folder.")
     exit()
 
 # === EMOTION-BASED RECOMMENDER FUNCTION ===
@@ -16,7 +16,7 @@ def recommend_movies(emotion):
     """Return top 5 movies based on the given emotion."""
     emotion = emotion.capitalize()
     if emotion not in df['Emotion'].unique():
-        print(f"⚠️ Emotion '{emotion}' not found! Available emotions are:")
+        print(f" Emotion '{emotion}' not found! Available emotions are:")
         print(", ".join(df['Emotion'].unique()))
         return []
 
